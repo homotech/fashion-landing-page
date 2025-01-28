@@ -1,10 +1,8 @@
-"use client";
 import React from "react";
 import ImageOne from "@/../public/image-one.jpeg";
 import ImageTwo from "@/../public/image-two.jpeg";
 import ImageThree from "@/../public/image-three.jpeg";
 import ImageFour from "@/../public/image-four.jpeg";
-import { useState } from "react";
 import Image from "next/image";
 import { Libre_Baskerville, Poppins } from "next/font/google";
 
@@ -19,7 +17,7 @@ const PoppinsFont = Poppins({
 });
 
 const FeaturedProducts = () => {
-  const [images, setImages] = useState([
+  const images = [
     {
       productname: "Product name",
       price: "$99.99",
@@ -40,7 +38,7 @@ const FeaturedProducts = () => {
       price: "$29.99",
       imageLink: ImageFour,
     },
-  ]);
+  ];
 
   return (
     <div className="container mx-auto px-4 py-8">

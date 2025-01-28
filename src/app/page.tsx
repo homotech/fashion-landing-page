@@ -1,6 +1,4 @@
 import Navbar from "@/components/navbar";
-import Image from "next/image";
-import Link from "next/link";
 import NewsLetter from "@/components/newsletter";
 import FeaturedProducts from "@/components/featuredProducts";
 import Footer from "@/components/footer";
