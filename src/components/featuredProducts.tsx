@@ -42,24 +42,27 @@ const FeaturedProducts = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className={`${libreBaskerVille.className} text-2xl mb-8 `}>
+      <h2 className={`${libreBaskerVille.className} text-2xl mb-8`}>
         Featured Products
       </h2>
-      <div>
+      <div className="flex flex-col gap-4">
         {images.map((image, index) => (
-          <div className="w-full bg-white mb-4 " key={image.price + index}>
-            <Image
-              src={image.imageLink}
-              className="w-full rounded-lg mb-4 border-2 border-gray-200 object-cover"
-              alt="Image description"
-            />
-            <p
-              className={`${PoppinsFont.className} text-3xl`}
-              //   style={{ fontWeight: "bold" }}
-            >
-              {image.productname}
-            </p>
-            <p>{image.price}</p>
+          <div key={image.price + index} className="bg-white  flex flex-col">
+            <div className="w-full rounded-lg overflow-hidden">
+              <Image
+                src={image.imageLink}
+                className="w-full object-cover scale-[1.1]"
+                alt="Image description"
+                // Assuming you want to set a maximum height here for aspect ratio control
+                // style={{ height: "auto", maxWidth: "100%" }}
+              />
+            </div>
+            <div className="p-4">
+              <p className={`${PoppinsFont.className} text-3xl font-bold`}>
+                {image.productname}
+              </p>
+              <p className="mt-2">{image.price}</p>
+            </div>
           </div>
         ))}
       </div>

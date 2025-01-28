@@ -28,9 +28,11 @@ const newsLetter = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full md:w-64 bg-blue-100 bg-opacity-50 px-4 py-4 rounded-md flex-4 placeholder:text-white placeholder-opacity-50"
+            className={`${PoppinsFont.className} w-2/3 md:w-64 bg-blue-100 bg-opacity-50 px-4 py-4 rounded-md placeholder:text-white placeholder-opacity-50`}
           />
-          <button className="w-full py-4 bg-blue-600 rounded-md" type="submit">
+          <button
+            className={`${PoppinsFont.className} w-1/3 py-4 bg-blue-600 rounded-md" type="submit`}
+          >
             Subscribe
           </button>
         </form>
